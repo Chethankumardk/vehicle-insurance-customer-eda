@@ -64,8 +64,17 @@ This project demonstrates practical experience with:
 - exploratory data analysis
 - translating a business question into a data-analysis workflow
 
-## Limitations
+## Analysis Limitations
 
-This is an exploratory data-analysis project. The results should be interpreted as descriptive analysis rather than as a validated insurance pricing or risk model.
+This project is an exploratory data-analysis exercise, and several preprocessing choices in the original notebook should be considered when interpreting the results:
+
+- Missing numerical values in the policy data are handled using a broad mean-based imputation approach, which may affect the original distributions.
+- Missing age values are handled using mode-based imputation.
+- The notebook investigates potential outliers using the interquartile range (IQR) method.
+- Some string-cleaning and duplicate-removal operations in the original notebook are evaluated without permanently assigning the transformed result back to the source DataFrame.
+- Correlation analysis is exploratory and should not be interpreted as evidence of causation.
+- The analysis does not constitute a validated insurance pricing, risk-assessment, or predictive model.
+
+These limitations are documented to keep the portfolio representation transparent and reproducible.
 
 No machine-learning or predictive insurance model is claimed in this repository.
